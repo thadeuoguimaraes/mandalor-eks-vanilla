@@ -1,5 +1,5 @@
 module "eks" {
-  source = "github.com/thadeuguimaraes/mandalor-eks-module?ref=v1.0.0"
+  source = "github.com/thadeuoguimaraes/mandalor-eks-module?ref=v1.0.0"
 
   # ── Cluster ──────────────────────────────────────────────────────────────────
   cluster_name       = var.cluster_name
