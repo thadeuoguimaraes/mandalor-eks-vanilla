@@ -4,6 +4,10 @@ resource "helm_release" "node_termination_handler" {
 
   chart      = "aws-node-termination-handler"
   repository = "https://aws.github.io/eks-charts/"
+  version    = "0.21.0"
+  atomic     = true
+
+  depends_on = [module.eks]
 
   set = [
     {

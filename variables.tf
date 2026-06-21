@@ -21,7 +21,7 @@ variable "profile" {
 variable "k8s_version" {
   type        = string
   description = "Versão do Kubernetes"
-  default     = "1.32"
+  default     = "1.33"
 }
 
 variable "tags" {
@@ -101,7 +101,7 @@ variable "addon_coredns_version" {
 variable "addon_kubeproxy_version" {
   type        = string
   description = "Versão do addon Kube-Proxy"
-  default     = "v1.32.13-eksbuild.8"
+  default     = "v1.33.10-eksbuild.13"
 }
 
 variable "addon_ebs_csi_version" {
