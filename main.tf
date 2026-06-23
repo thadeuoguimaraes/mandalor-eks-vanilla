@@ -1,5 +1,5 @@
 module "eks" {
-  source = "github.com/thadeuoguimaraes/mandalor-eks-module?ref=v1.1.0"
+  source = "github.com/thadeuoguimaraes/mandalor-eks-module?ref=v1.2.0"
 
   # ── Cluster ──────────────────────────────────────────────────────────────────
   cluster_name       = var.cluster_name
@@ -21,26 +21,13 @@ module "eks" {
   enable_node_group_critical = false
   enable_node_group_graviton = false
 
-  # ── EKS Addons ────────────────────────────────────────────────────────────
-  eks_addons = {
-    vpc-cni = {
-      version = var.addon_cni_version
-    }
-    coredns = {
-      version = var.addon_coredns_version
-    }
-    kube-proxy = {
-      version = var.addon_kubeproxy_version
-    }
-    aws-ebs-csi-driver = {
-      version = var.addon_ebs_csi_version
-    }
-  }
-
   # ── Helm Charts ───────────────────────────────────────────────────────────
   enable_cluster_autoscaler = true
   enable_metrics_server     = true
   enable_kube_state_metrics = false
+
+  # Addons gerenciados diretamente em addons.tf
+  eks_addons = {}
 
   # NTH é gerenciado fora do módulo (com SQS)
   enable_node_termination_handler = false

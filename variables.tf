@@ -2,6 +2,11 @@
 # Cluster
 # ─────────────────────────────────────────────
 
+variable "project_name" {
+  type        = string
+  description = "Nome do projeto, usado como prefixo nos recursos"
+}
+
 variable "cluster_name" {
   type        = string
   description = "Nome do cluster EKS"
