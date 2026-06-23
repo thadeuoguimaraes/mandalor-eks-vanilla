@@ -12,6 +12,7 @@ resource "helm_release" "kube_state_metrics" {
   ]
 
   depends_on = [
-    module.eks
+    module.eks,
+    aws_eks_fargate_profile.wildcard
   ]
 }

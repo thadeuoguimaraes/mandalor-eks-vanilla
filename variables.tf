@@ -26,7 +26,7 @@ variable "profile" {
 variable "k8s_version" {
   type        = string
   description = "Versão do Kubernetes"
-  default     = "1.33"
+  default     = "1.35"
 }
 
 variable "tags" {
@@ -94,23 +94,23 @@ variable "auto_scale_options" {
 variable "addon_cni_version" {
   type        = string
   description = "Versão do addon VPC CNI"
-  default     = "v1.21.1-eksbuild.8"
+  default     = "v1.19.5-eksbuild.3"
 }
 
 variable "addon_coredns_version" {
   type        = string
   description = "Versão do addon CoreDNS"
-  default     = "v1.11.4-eksbuild.33"
+  default     = "v1.11.4-eksbuild.14"
 }
 
 variable "addon_kubeproxy_version" {
   type        = string
   description = "Versão do addon Kube-Proxy"
-  default     = "v1.33.10-eksbuild.13"
+  default     = "v1.35.0-eksbuild.2"
 }
 
 variable "addon_ebs_csi_version" {
   type        = string
   description = "Versão do addon AWS EBS CSI Driver"
-  default     = "v1.59.0-eksbuild.1"
+  default     = "v1.40.0-eksbuild.1"
 }
