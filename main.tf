@@ -23,7 +23,7 @@ module "eks" {
 
   # ── Helm Charts ───────────────────────────────────────────────────────────
   enable_cluster_autoscaler = true
-  enable_metrics_server     = true
+  enable_metrics_server     = false
   enable_kube_state_metrics = false
 
   # Addons gerenciados diretamente em addons.tf
