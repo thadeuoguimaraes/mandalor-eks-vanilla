@@ -94,13 +94,13 @@ variable "auto_scale_options" {
 variable "addon_cni_version" {
   type        = string
   description = "Versão do addon VPC CNI"
-  default     = "v1.19.5-eksbuild.3"
+  default     = "v1.22.2-eksbuild.1"
 }
 
 variable "addon_coredns_version" {
   type        = string
   description = "Versão do addon CoreDNS"
-  default     = "v1.11.4-eksbuild.14"
+  default     = "v1.13.2-eksbuild.11"
 }
 
 variable "addon_kubeproxy_version" {
@@ -112,5 +112,5 @@ variable "addon_kubeproxy_version" {
 variable "addon_ebs_csi_version" {
   type        = string
   description = "Versão do addon AWS EBS CSI Driver"
-  default     = "v1.40.0-eksbuild.1"
+  default     = "v1.62.0-eksbuild.1"
 }
