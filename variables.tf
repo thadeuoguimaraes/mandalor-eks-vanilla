@@ -100,7 +100,7 @@ variable "addon_cni_version" {
 variable "addon_coredns_version" {
   type        = string
   description = "Versão do addon CoreDNS"
-  default     = "v1.11.4-eksbuild.33"
+  default     = "v1.13.2-eksbuild.11"
 }
 
 variable "addon_kubeproxy_version" {
