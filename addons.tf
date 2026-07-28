@@ -7,7 +7,7 @@ resource "aws_eks_addon" "cni" {
   resolve_conflicts_on_update = "OVERWRITE"
 
   depends_on = [
-    aws_eks_access_entry.nodes
+    module.eks
   ]
 }
 
@@ -20,7 +20,7 @@ resource "aws_eks_addon" "coredns" {
   resolve_conflicts_on_update = "OVERWRITE"
 
   depends_on = [
-    aws_eks_access_entry.nodes
+    module.eks
   ]
 }
 
@@ -33,6 +33,6 @@ resource "aws_eks_addon" "kubeproxy" {
   resolve_conflicts_on_update = "OVERWRITE"
 
   depends_on = [
-    aws_eks_access_entry.nodes
+    module.eks
   ]
 }
